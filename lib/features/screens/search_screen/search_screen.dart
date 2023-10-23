@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
-import 'package:weather_app/core/api/weather_service.dart';
-import 'package:weather_app/core/providers/weather_provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/core/cubits/get_weather/weather_cubit.dart';
+
 
 class SearchScreen extends StatelessWidget {
   String? searchedCity;
@@ -13,7 +12,7 @@ class SearchScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 3,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         title: const Text(
           "Search a city ",
           style: TextStyle(color: Colors.black),
@@ -27,11 +26,7 @@ class SearchScreen extends StatelessWidget {
               TextField(
                 onSubmitted: (value) async {
                   searchedCity = value;
-                  var weather =
-                      await WeatherService.getWeather(cityName: searchedCity!);
-                  Provider.of<WeatherProvider>(context, listen: false)
-                      .getWeatherData(weather);
-                  //Navigator.of(context).pop("/");
+                  BlocProvider.of<WeatherCubit>(context).getWeather(searchedCity:searchedCity??"" );
                   Navigator.pop(context);
                 },
                 decoration: const InputDecoration(
@@ -47,7 +42,7 @@ class SearchScreen extends StatelessWidget {
                       borderSide: BorderSide(color: Colors.white)),
                 ),
               ),
-              SizedBox(height: 50,),
+              const SizedBox(height: 50,),
               Image.asset(
                   'assets/images/animation_llw8jfaj_small.gif',height: 150,fit: BoxFit.fill,),
             ],

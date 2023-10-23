@@ -11,7 +11,7 @@ class NoWeatherScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
            Image.asset('assets/images/no-data-found-8867280-7265556.webp'),
-            Text(
+            const Text(
               "Start searching now 🔍",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
