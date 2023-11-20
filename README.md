@@ -1,16 +1,22 @@
-# weather_app
+# WeatherWise
 
-A new Flutter project.
+Weather Wise: Your daily forecast at a glance. Stay ahead with accurate weather updates and personalized insights for your location.
 
-## Getting Started
+## Technology used:
 
-This project is a starting point for a Flutter application.
+- State management: Cubit
+- with url package
 
-A few resources to get you started if this is your first Flutter project:
+## packages used:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- http
+- google_fonts
+- lottie
+- flutter_bloc
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ScreenShots
+
+<img src="screen_shots/splash_screen.jpg" width="300">
+<img src="screen_shots/home_view.jpg" width="300">
+<img src="screen_shots/search_view.jpg" width="300">
+<img src="screen_shots/weather_details_view.jpg" width="300">
