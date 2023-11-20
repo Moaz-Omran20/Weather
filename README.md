@@ -5,7 +5,7 @@ Weather Wise: Your daily forecast at a glance. Stay ahead with accurate weather 
 ## Technology used:
 
 - State management: Cubit
-- with url package
+- weather api with url package
 
 ## packages used:
 
